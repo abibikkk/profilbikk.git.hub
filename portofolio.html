@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Saya</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #47519e, #5bbd3d, #2135cd, #acb525);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .home-content {
+      text-align: center;
+      max-width: 600px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .home-content h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .home-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .photo-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255, 255, 255, 0.7);
+      margin: 0 auto 20px auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .about-box p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <h1>Profil Abi</h1>
+    <div>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang Saya</a>
+    </div>
+  </nav>
+
+  
+  <section class="section" id="beranda">
+    <div class="home-content">
+      <h2>Selamat Datang di Profil Pribadi Saya!</h2>
+      <p>Ini adalah ruang profil pribadi saya, tempat saya untuk menambahkan gambaran atau informasi singkat mengenai diri saya sendiri, untuk sekarang cukup segini aja. Nanti kalo ada ide lagi pasti ditambah! Oh ya, yukss kenalan! Geser kebawah atau klik "Tentang Saya" diatas yaa!!</p>
+    </div>
+  </section>
+
+
+  <section class="section" id="tentang">
+    <div class="about-box">
+      <div class="photo-circle">
+        <img src="muka1.jpg" alt="Foto Saya" />
+      </div>
+      <h2>Hallo Friends</h2>
+      <p>I am a student who is in vocational school, I go to state vocational high school 5. My major is Teknik Komputer Dan Jaringan. Selain itu saya juga hobi seni musik, saya bermain alat musik Drum</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/abiisbbn_?igsh=MXhrYnh0N3I5aWJ2NA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@abibikkkk?_t=ZS-8xiCjCwEyHA&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://open.spotify.com/user/31k5icsn7wn7xyc4grkptwgt3dr4?si=IIisXoJIRoyZGArXN50Tpg" target="_blank"><i class="fab fa-spotify"></i></a>
+    </div>
+
+  </footer>
+
+  <section class="section" id="formulir">
+  <div class="form-box">
+    
+    <h2> Tulis nama kamu dong wkwkwk</h2>
+    <input type="text" id="inputPesan" placeholder="Tulis sesuatu di sini..." />
+    <button onclick="kirimPesan()">Konfirmasi</button>
+    
+    <div class="konfirmasi" id="hasil" style="display: none;">
+      <i class="fas fa-check-circle"></i>
+      <p>Terima kasih!</p>
+    </div>
+  </div>
+  <div></div>
+  
+</section>
+<p style="margin-top:10px;">&copy; 2025 Profil Abi</p>
+<body>
+  <script>
+  function kirimPesan() {
+    const input = document.getElementById("inputPesan").value;
+    const hasil = document.getElementById("hasil");
+
+    if (input.trim() !== "") {
+      hasil.style.display = "block";
+    } else {
+      alert("Silakan isi dulu pesannya.");
+    }
+  }
+</script>
+</body>
+</body>
+</html>
